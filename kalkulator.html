@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Sequence Generator</title>
+  <link rel="stylesheet" href="barisAritmatik.css">
+</head>
+<body>
+  <nav>
+    <div class="wrapper"> 
+        <div class="logo"><a href=' ' >Baris & Deret Aritmatika</a></div>
+          <div class="menu">
+                
+            <ul>
+                <li><a href="home.html" class="tbl-biru">Home</a></li>
+                <li><a href="profil.html"class= "tbl-biru">Profile</a></li>
+                <li><a href="materi.html" class= "tbl-biru">Materi</a></li>
+                <li><a href="kalkulator.html" class= "tbl-biru">Kalkulator</a></li>
+                 
+            </ul>
+          </div>  
+    </div>
+  </nav>
+  <h1>Arithmetic Sequence Calculator</h1>
+  <div class="container">
+    <input type="number" id="sukuPertama" placeholder="Suku Pertama">
+    <input type="number" id="Beda" placeholder="Beda">
+    <input type="number" id="SukuKeN" placeholder="Suku ke-n">
+    <select id="choise">
+        <option value="baris"> Baris Aritmatika</option>
+        <option value="deret"> Deret Aritmatika</option>
+    </select> 
+    <button onclick="generateSequence()">Hitung</button>
+  </div>
+  <div id="sequenceResult"></div>
+<script src="baris.js"> </script>
+</body>
+</html> 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Sequence Generator</title>
+  <link rel="stylesheet" href="barisAritmatik.css">
+</head>
+<body>
+  <h2>Arithmetic Sequence Generator</h2>
+  <h2>Kalkulator Baris Aritmatik</h2>
+  <div class="container">
+    <input type="number" id="sukuPertama" placeholder="Suku Pertama">
+    <p></p>
+    <input type="number" id="Beda" placeholder="Beda">
+    <p></p>
+    <input type="number" id="SukuKeN" placeholder="Suku ke-n">
+    <p></p>
+    <button onclick="generateSequence()">Hitung</button>
+  </div>
+  <div id="sequenceResult"></div>
+<script>
+  function generateSequence() {
+  const sukuPertama = parseInt(document.getElementById("sukuPertama").value);
+  const Beda = parseInt(document.getElementById("Beda").value);
+  const SukuKeN = parseInt(document.getElementById("SukuKeN").value);
+
+  if (!isNaN(sukuPertama) && !isNaN(Beda) && !isNaN(SukuKeN)) {
+    let sequence = [];
+    let term = sukuPertama;
+    for (let i = 0; i < SukuKeN; i++) {
+      sequence.push(term);
+      term += Beda;
+    }
+
+    displaySequence(sequence);
+  } else {
+    alert("Please enter valid numbers for all fields.");
+  }
+}
+
+function displaySequence(sequence) {
+  const sequenceResultDiv = document.getElementById("sequenceResult");
+  sequenceResultDiv.innerHTML = "<strong>Arithmetic Sequence:</strong> " + sequence.join(", ");
+}
+</script>
+
+</body>
+</html>
